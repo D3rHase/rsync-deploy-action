@@ -1,6 +1,6 @@
 # action.yml
 name: 'rsync deployment'
-description: 'Deploy files to remote server via rsync.'
+description: 'Deploy files to remote server via rsync'
 
 inputs:
   HOST:
