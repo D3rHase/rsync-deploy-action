@@ -1,0 +1,41 @@
+# action.yml
+name: 'rsync deploy'
+description: 'Deploy files to remote server via rsync.'
+
+inputs:
+  HOST:
+    description: 'hostname / IP of the server'
+    required: true
+  PORT:
+    description: 'ssh port of the server'
+    required: false
+    default: 22
+  USER:
+    description: 'user of the server'
+    required: true
+  PRIVATE_SSH_KEY:
+    description: 'private ssh key registered on the server'
+    required: true
+  REPOSITORY_PATH:
+    description: 'path of the file-s to deploy'
+    required: false
+    default: '*'
+  SERVER_PATH:
+    description: 'server path / destination'
+    required: false
+    default: '~/'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.HOST }}
+    - ${{ inputs.PORT }}
+    - ${{ inputs.USER }}
+    - ${{ inputs.PRIVATE_SSH_KEY }}
+    - ${{ inputs.REPOSITORY_PATH }}
+    - ${{ inputs.SERVER_PATH }}
+
+branding:
+  icon: 'upload-cloud'
+  color: 'yellow'
