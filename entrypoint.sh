@@ -15,5 +15,10 @@ END
 
 # Uploading the file-s
 echo starting to upload file/-s...
-rsync -avz $GITHUB_WORKSPACE/$INPUT_REPOSITORY_PATH server:$INPUT_SERVER_PATH
+if [ ${INPUT_REPOSITORY_PATH:0:1} = "/" ]
+then
+  rsync -avz $GITHUB_WORKSPACE/${INPUT_REPOSITORY_PATH:1} server:$INPUT_SERVER_PATH
+else
+  rsync -avz $GITHUB_WORKSPACE/$INPUT_REPOSITORY_PATH server:$INPUT_SERVER_PATH
+fi
 echo finished uploading...
