@@ -9,7 +9,7 @@ This is a GitHub Action designed to deploy files to a remote server using `rsync
 
 - [Features](#features)
 - [Usage](#usage)
-  - [Action Example](#workflow-example)
+  - [Action Example](#action-example)
   - [Parameters](#parameters)
   - [Secrets Configuration](#secrets-configuration)
   - [Adding an SSH Key to your Server](#adding-an-ssh-key-to-your-server)
@@ -24,9 +24,9 @@ This is a GitHub Action designed to deploy files to a remote server using `rsync
 
 ## Usage
 
-### Workflow example
+### Action example
 
-Here's a action example of how to use this `rsync-action` in your GitHub workflow.
+Here's a action example of how to use this `rsync-action`.
 
 
 
@@ -44,7 +44,7 @@ Here's a action example of how to use this `rsync-action` in your GitHub workflo
 ```
 
 ### Parameters
-You can use plain text instead of the secrets for these values directly in your workflow, but it is highly recommended to use GitHub Secrets for sensitive information to ensure privacy and security. See [Secrets Configuration](#secrets-configuration).
+You can use plain text instead of the secrets for these values directly in your action, but it is highly recommended to use GitHub Secrets for sensitive information to ensure privacy and security. See [Secrets Configuration](#secrets-configuration).
 
 - `HOST`: The remote server address (IP or domain) - **Required**.
 - `PORT`: The port to connect to on the remote server - *Default: 22*.
