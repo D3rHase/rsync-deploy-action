@@ -95,7 +95,7 @@ To use this action, you'll need to set up an SSH key on your server. Here's how 
 
 ## How to implement in your workflow
 
-To use this action, simply include it in your GitHub workflow YAML file as shown in the example below.
+This is an example of how you could use it in your GitHub workflow YAML file.
 
 ```yaml
 name: Example workflow file
