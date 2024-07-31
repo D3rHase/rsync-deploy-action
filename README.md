@@ -26,7 +26,7 @@ This is a GitHub Action designed to deploy files to a remote server using `rsync
 
 ### Workflow example
 
-Here's a workflow file example of how to use this `rsync-action` in your GitHub workflow.
+Here's a action example of how to use this `rsync-action` in your GitHub workflow.
 
 
 
